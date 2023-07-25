@@ -1,6 +1,6 @@
 {
   "name": "@tailosinc/grafanaplugin-map-panel",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Visualize maps provided by an s3 datasource",
   "scripts": {
     "build": "webpack -c ./.config/webpack/webpack.config.ts --env production",
