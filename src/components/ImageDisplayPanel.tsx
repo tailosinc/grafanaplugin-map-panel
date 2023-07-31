@@ -8,19 +8,32 @@ import useMapData from './GetMaps';
 
 interface Props extends PanelProps<SimpleOptions> { }
 
+const isValidUrl = (url: string) => /^(http|https):\/\/[^ "]+$/.test(url);
+
 export const ImageDisplayPanel: React.FC<Props> = ({
   options, data, width, height,
 }) => {
   const styles = getStyles();
 
   // TODO: we'll need get all values from the first data series into URLS to be displayed
-  // First query from the S3 Data Source plugin to get the image to be displayed
+  // First series will get the image to be displayed  
   const displayUrl = data.series[0].fields[0].values.get(0);
-  // Second query from the S3 Data Source plugin to get a distinct download URL (if it exists)
+
+  // Second series will get a distinct download URL (if it exists)
   const downloadUrl = data.series.length > 1 ? data.series[1].fields[0].values.get(0) : displayUrl;
 
   const { states } = useMapData(displayUrl, width, height, options);
   const [displayDownload, setDisplayDownload] = useState(false);
+
+  if (!isValidUrl(displayUrl) || !isValidUrl(downloadUrl)) {
+    return (
+      <div className={styles.panel}>
+        <div className={styles.wrapper}>
+          ERROR: Data source must return a valid image URL, like `https://grafana.com/media/images/logos/grafana-logo-footer.svg`
+        </div>
+      </div>
+    );
+  }
 
   const { imgWidth, imgHeight } = states;
   const displayWidth = imgWidth;
