@@ -7,7 +7,7 @@
     "keywords": [
       "panel"
     ],
-    "description": "Visualize maps provided by an s3 datasource",
+    "description": "Visualize image files for indoor maps.",
     "author": {
       "name": "Tailos"
     },

@@ -1,11 +1,21 @@
 # Grafana Plugin: Map Panel
 
-Visualize maps provided by an s3 datasource
+Visualize image files for indoor maps.
 
+## Interface
+We expect the datasource to provide a parseable JSON string of an object in the shape:
 
-## Requirements
+```
+{
+  layers: { cleaning: "<SOME_URL>"},
+  mapBundle: "<SOME_URL>"
+}
+```
 
-- Depends on [grafanaplugin-s3-datasource](https://github.com/tailosinc/grafanaplugin-s3-datasource) -- please make sure you have that installed to the same parent directory if you want to develop this plugin!
+Note that this will be subject to change as we include new features (e.g. viewing multiple layers).
+
+### Example Setup
+You can use the [infinity datasource](https://grafana.com/grafana/plugins/yesoreyeram-infinity-datasource/?tab=installation) as . Simply put it in a top-level `plugins` folder then install through administration tools.
 
 ## Getting Started
 

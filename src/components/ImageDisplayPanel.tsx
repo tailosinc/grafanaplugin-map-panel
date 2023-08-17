@@ -15,12 +15,9 @@ export const ImageDisplayPanel: React.FC<Props> = ({
 }) => {
   const styles = getStyles();
 
-  // TODO: we'll need get all values from the first data series into URLS to be displayed
-  // First series will get the image to be displayed  
-  const displayUrl = data.series[0].fields[0].values.get(0);
-
-  // Second series will get a distinct download URL (if it exists)
-  const downloadUrl = data.series.length > 1 ? data.series[1].fields[0].values.get(0) : displayUrl;
+  const parsedData = JSON.parse(data.series[0].fields[0].values.get(0));
+  const displayUrl = parsedData.layers.cleaning;
+  const downloadUrl = parsedData.mapBundle ?? displayUrl;
 
   const { states } = useMapData(displayUrl, width, height, options);
   const [displayDownload, setDisplayDownload] = useState(false);
