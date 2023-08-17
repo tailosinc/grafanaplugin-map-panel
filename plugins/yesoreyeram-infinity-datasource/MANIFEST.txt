@@ -1,0 +1,50 @@
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+{
+  "manifestVersion": "2.0.0",
+  "signatureType": "community",
+  "signedByOrg": "yesoreyeram",
+  "signedByOrgName": "Sriramajeyam Sugumaran",
+  "rootUrls": [],
+  "plugin": "yesoreyeram-infinity-datasource",
+  "version": "2.0.0",
+  "time": 1687950577207,
+  "keyId": "7e4d0c6a708866e7",
+  "files": {
+    "gpx_infinity_linux_amd64": "1ed30a1ec44881f69ccda9052f9d46349d5fc817c7daab97060f5ccfb869a903",
+    "gpx_infinity_windows_amd64.exe": "a85eaadf47417ff7e36de4f285a465a3258eedd5c5253199414cb57dfacd9c44",
+    "gpx_infinity_darwin_amd64": "d3c453db127edf545ea3561afed191ed7f7d993133e7a01f2cd5e143317ae076",
+    "gpx_infinity_linux_arm64": "1b632aeb4a7f5e4c8096a7442b60072b2b7cf216ce26ea25e5bbc297fc3e7f0e",
+    "img/slide-variables.png": "8ed0cd7b1ac00bd2c7fa6e72c513b678c39ba7d63030f06e8695cb1d352e3b34",
+    "img/aws.jpg": "e682ccc794708fd3eb32a3fb5e2bcccd8ff3b54f30eba2086fd1b28a82020d81",
+    "img/homepage-bg.svg": "97ec32b2c542bcb63b7fa7659e42a876a5b9ec00aef7a486f2dc41b83d7d9eb8",
+    "img/slide-features.png": "58aba3b2f2d73ee99945cba9746463f0039d8afb5366ed8d42db62145b914d0f",
+    "img/oauth-2-sm.png": "9945bb307d5545369d50381acc97d48b4a98433831f14e99eb839f0970a91258",
+    "img/slide-series.png": "f7d523c39f9d4567974c37432f047e4e8944cb92dc2c9a4424757ce5e54dc3a7",
+    "img/slide-rest-api.png": "cf72349768e0ccf19a856d86e97c8e67dcdadfcee49e73ae5acbe781c3ae0c79",
+    "img/icon.svg": "e498b00e1cc3c9e8b65a2b8320b7d170c6da61d424fe5f3f3fdf9963204449ae",
+    "gpx_infinity_linux_arm": "6e9cc103a8a5d8e9f1bf4bf26177c6aa473c07f33ee3b29b5d13d44d1ffbc8ba",
+    "module.js.LICENSE.txt": "c18b3334ddca8d22ac5a07738a31d4cbb76180b91b9c77c38346ebc377d69098",
+    "LICENSE": "cf7c88bac56d05ba8bae0401ffd8f72334bf2b685a8e4cbae76c3b1d11c6c24e",
+    "gpx_infinity_darwin_arm64": "e18c34d56cc8d36e28bfa29d0d68fd9d1ddbf8c0cdfed717e14436dfd79931a4",
+    "CHANGELOG.md": "4cc97404518edf7bf35b9176da090fa556595c606dc4f1e7b21a7cc46bf4d377",
+    "go_plugin_build_manifest": "63cb6cebcea6d6d57eda64fdf595e95166ea8796aafda5c1d5d6a14c4e2bf58f",
+    "plugin.json": "d9d405d4de12e67c8d55ad177b2f63ec6aaeb3f92321ef99509efda5f5914798",
+    "module.js": "8d5909fe936f72245a4b2c7eb5c6f6d40b2858d8bcb88dc08248768b288ab2ea",
+    "module.js.map": "0cea45868a8145ba39f52cc7c4b0db5a258df4cc73dc2f518f7d6b68c71572d9",
+    "README.md": "01256e89eb5a45ac9e408b1df31cde16c81991c133cc2a235a1a56db808c83d1"
+  }
+}
+-----BEGIN PGP SIGNATURE-----
+Version: OpenPGP.js v4.10.10
+Comment: https://openpgpjs.org
+
+wrgEARMKAAYFAmScFPEAIQkQfk0ManCIZucWIQTzOyW2kQdOhGNlcPN+TQxq
+cIhm5y9OAgYpiOROGnxDPwReypawROGHka9Vr8JewpTfn3f7nka0NpSwQBP/
+gm/OexPipeEwvAQ9atJNcfJY0akBOXjiFfDeQAIJAeN6WQ8x2niHSPwVCcel
+OGQFGR5zATKBN3OCYIyi1LB7OkwnKMuLB5CRiBNAD2lqf/Og2dIfMsbkX9S5
+LcadausK
+=lAlg
+-----END PGP SIGNATURE-----

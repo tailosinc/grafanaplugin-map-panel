@@ -11,6 +11,5 @@ services:
     ports:
       - 3000:3000/tcp
     volumes:
-      - ./provisioning:/etc/grafana/provisioning
+      - ./plugins:/var/lib/grafana/plugins
       - ./dist:/var/lib/grafana/plugins/grafanaplugin-map-panel
-      - ../grafanaplugin-s3-datasource/dist:/var/lib/grafana/plugins/grafanaplugin-s3-datasource

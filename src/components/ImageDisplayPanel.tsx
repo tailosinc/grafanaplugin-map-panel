@@ -16,11 +16,12 @@ export const ImageDisplayPanel: React.FC<Props> = ({
   const styles = getStyles();
 
   // TODO: we'll need get all values from the first data series into URLS to be displayed
-  // First series will get the image to be displayed  
-  const displayUrl = data.series[0].fields[0].values.get(0);
+  // All fields are now returned in a single series
+  // The First field is a JSON string with the cleaning url contained in the "cleaning" field
+  const displayUrl = JSON.parse(data.series[0].fields[0].values.get(0)).cleaning;
 
-  // Second series will get a distinct download URL (if it exists)
-  const downloadUrl = data.series.length > 1 ? data.series[1].fields[0].values.get(0) : displayUrl;
+  // Second field is a string containing get a distinct download URL for the map bundle (if it exists)
+  const downloadUrl = data.series[0].fields[1].values.get(0) ?? displayUrl;
 
   const { states } = useMapData(displayUrl, width, height, options);
   const [displayDownload, setDisplayDownload] = useState(false);
