@@ -16,8 +16,12 @@
       "large": "img/logo.svg"
     },
     "links": [],
-    "screenshots": [],
-    "version": "1.1.0",
+    "screenshots": [
+      {
+      "name": "Indoor Map screenshot", "path": "img/screenshot.png"
+      }
+  ],
+    "version": "1.1.1",
     "updated": "2023-07-25"
   },
   "dependencies": {
