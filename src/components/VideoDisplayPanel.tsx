@@ -1,7 +1,6 @@
-// import { stylesFactory } from '@grafana/ui';
+import { stylesFactory } from '@grafana/ui';
 import { css, cx } from '@emotion/css';
 import ReactPlayer from 'react-player'
-// import React, { useState } from 'react';
 import React from 'react';
 
 
@@ -16,8 +15,14 @@ interface Props {
 export const VideoDisplayPanel: React.FC<Props> = ({
   videoUrl, imageUrl, downloadUrl, width, height,
 }) => {
-  // const styles = getStyles();
-  console.log(width, height)
+  const styles = getStyles();
+
+  const DownloadFile = () => {
+    const link = document.createElement('a');
+    link.href = downloadUrl;
+    link.download = downloadUrl.substr(downloadUrl.lastIndexOf('/') + 1);
+    link.click();
+  };
 
   return (
     <>
@@ -38,25 +43,33 @@ export const VideoDisplayPanel: React.FC<Props> = ({
               height: ${height}px;
             `,
         )}
-        
       />
+              <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href={imageUrl}
+          download
+          className={styles.downloadButton}
+          onClick={(e) => DownloadFile()}
+        >
+          <i className="fa fa-download" />
+        </a>
     </>
   );
 };
 
-// const getStyles = stylesFactory(() => ({
-//   downloadButton: css`
-//       height: 2rem;
-//       width: 2rem;
-//       font-size: 1.5rem;
+const getStyles = stylesFactory(() => ({
+  downloadButton: css`
+      height: 2rem;
+      width: 2rem;
+      font-size: 1.5rem;
 
-//       position: absolute;
-//       right: 20px;
-//       bottom: 20px;
-//       border-radius: 50%;
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      text-shadow: 0 0 3px #000;
 
-//       background-color: #6f00df;
-//       color: #ffffff;
-//       text-align: center;
-//     `,
-// }));
+      color: #ffffff;
+      text-align: center;
+    `,
+}));
