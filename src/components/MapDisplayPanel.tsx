@@ -48,7 +48,7 @@ export const MapDisplayPanel: React.FC<Props> = ({
 
   const parsedData = JSON.parse(data.series[0].fields[0].values.get(0));
   let imageUrl = parsedData.layers?.cleaning;
-  const videoUrl = parsedData.video?.cleaning || 'https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/360/Big_Buck_Bunny_360_10s_1MB.mp4';
+  const videoUrl = parsedData.video?.cleaning;
   const downloadUrl = parsedData.mapBundle || videoUrl || imageUrl;
 
   const { width: mediaWidth, height: mediaHeight } = useMapData(imageUrl, width, height, options);
