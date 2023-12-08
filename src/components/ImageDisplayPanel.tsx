@@ -56,17 +56,16 @@ export const ImageDisplayPanel: React.FC<Props> = ({
 
 const getStyles = stylesFactory(() => ({
   downloadButton: css`
-      height: 2rem;
-      width: 2rem;
-      font-size: 1.5rem;
+    height: 2rem;
+    width: 2rem;
+    font-size: 1.5rem;
 
-      position: absolute;
-      right: 20px;
-      bottom: 20px;
-      border-radius: 50%;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    text-shadow: 0 0 3px #000;
 
-      background-color: #6f00df;
-      color: #ffffff;
-      text-align: center;
+    color: #ffffff;
+    text-align: center;
     `,
 }));

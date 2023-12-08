@@ -48,7 +48,7 @@ export const MapDisplayPanel: React.FC<Props> = ({
 
   const parsedData = JSON.parse(data.series[0].fields[0].values.get(0));
   let imageUrl = parsedData.layers?.cleaning;
-  const videoUrl = parsedData.video?.cleaning;
+  const videoUrl = parsedData.videos?.cleaning;
   const downloadUrl = parsedData.mapBundle || videoUrl || imageUrl;
 
   const { width: mediaWidth, height: mediaHeight } = useMapData(imageUrl, width, height, options);

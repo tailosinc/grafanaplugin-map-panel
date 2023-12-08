@@ -31,12 +31,13 @@ export const VideoDisplayPanel: React.FC<Props> = ({
         width={width}
         height={height}
         light={imageUrl}
-        loop={true}
+        loop={false}
         volume={0}
         muted={true}
         playing={true}
         previewTabIndex={20}
         controls={true}
+        onError={(e) => console.log('Error playing video', e)}
         className={cx(
           css`
               width: ${width}px;
