@@ -1,6 +1,6 @@
 {
   "name": "@tailosinc/grafanaplugin-map-panel",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "Visualize image files for indoor maps.",
   "scripts": {
     "build": "webpack -c ./.config/webpack/webpack.config.ts --env production",
