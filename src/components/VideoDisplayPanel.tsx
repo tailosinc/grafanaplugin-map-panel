@@ -1,19 +1,21 @@
 import { stylesFactory } from '@grafana/ui';
 import { css, cx } from '@emotion/css';
-import React, { useState } from 'react';
+import ReactPlayer from 'react-player'
+import React from 'react';
+
 
 interface Props {
+  videoUrl: string;
   imageUrl: string;
   downloadUrl: string;
   width: number;
   height: number;
 }
 
-export const ImageDisplayPanel: React.FC<Props> = ({
-  imageUrl, downloadUrl, width, height,
+export const VideoDisplayPanel: React.FC<Props> = ({
+  videoUrl, imageUrl, downloadUrl, width, height,
 }) => {
   const styles = getStyles();
-  const [displayDownload, setDisplayDownload] = useState(false);
 
   const DownloadFile = () => {
     const link = document.createElement('a');
@@ -24,13 +26,18 @@ export const ImageDisplayPanel: React.FC<Props> = ({
 
   return (
     <>
-      <img
-        src={imageUrl || ''}
-        onError={() => {
-          setDisplayDownload(false);
-          throw new Error('No map image available!');
-        }}
-        onLoad={() => setDisplayDownload(true)}
+      <ReactPlayer 
+        url={videoUrl} 
+        width={width}
+        height={height}
+        light={imageUrl}
+        loop={false}
+        volume={0}
+        muted={true}
+        playing={true}
+        previewTabIndex={20}
+        controls={true}
+        onError={(e) => console.log('Error playing video', e)}
         className={cx(
           css`
               width: ${width}px;
@@ -38,8 +45,7 @@ export const ImageDisplayPanel: React.FC<Props> = ({
             `,
         )}
       />
-      {displayDownload && (
-        <a
+              <a
           target="_blank"
           rel="noopener noreferrer"
           href={imageUrl}
@@ -49,23 +55,22 @@ export const ImageDisplayPanel: React.FC<Props> = ({
         >
           <i className="fa fa-download" />
         </a>
-      )}
     </>
   );
 };
 
 const getStyles = stylesFactory(() => ({
   downloadButton: css`
-    height: 2rem;
-    width: 2rem;
-    font-size: 1.5rem;
+      height: 2rem;
+      width: 2rem;
+      font-size: 1.5rem;
 
-    position: absolute;
-    left: 20px;
-    top: 20px;
-    text-shadow: 0 0 3px #000;
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      text-shadow: 0 0 3px #000;
 
-    color: #ffffff;
-    text-align: center;
+      color: #ffffff;
+      text-align: center;
     `,
 }));

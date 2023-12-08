@@ -8,7 +8,8 @@ We expect the datasource to provide a parseable JSON string of an object in the 
 ```
 {
   layers: { cleaning: "<SOME_URL>"},
-  mapBundle: "<SOME_URL>"
+  videos: { cleaning: "<SOME_URL>"}, // Optional
+  mapBundle: "<SOME_URL>" // Optional
 }
 ```
 
