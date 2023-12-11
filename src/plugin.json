@@ -21,7 +21,7 @@
       "name": "Indoor Map screenshot", "path": "img/screenshot.png"
       }
   ],
-    "version": "1.2.0",
+    "version": "1.2.1",
     "updated": "2023-07-25"
   },
   "dependencies": {
