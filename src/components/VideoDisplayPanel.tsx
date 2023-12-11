@@ -1,6 +1,5 @@
 import { stylesFactory } from '@grafana/ui';
 import { css, cx } from '@emotion/css';
-import ReactPlayer from 'react-player'
 import React from 'react';
 
 
@@ -26,17 +25,15 @@ export const VideoDisplayPanel: React.FC<Props> = ({
 
   return (
     <>
-      <ReactPlayer 
-        url={videoUrl} 
+      <video 
+        src={videoUrl} 
+        controls={true}
         width={width}
         height={height}
-        light={imageUrl}
+        poster={imageUrl}
         loop={false}
-        volume={0}
         muted={true}
-        playing={true}
-        previewTabIndex={20}
-        controls={true}
+        preload='auto'
         onError={(e) => console.log('Error playing video', e)}
         className={cx(
           css`
