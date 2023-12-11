@@ -25,8 +25,9 @@ export const VideoDisplayPanel: React.FC<Props> = ({
 
   return (
     <>
-      <video controls 
+      <video 
         src={videoUrl} 
+        controls={true}
         width={width}
         height={height}
         poster={imageUrl}
